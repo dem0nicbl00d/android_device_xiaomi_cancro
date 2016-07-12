@@ -31,7 +31,7 @@ TARGET_NO_RADIOIMAGE         := true
 TARGET_BOARD_PLATFORM     := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
-USE_CLANG_PLATFORM_BUILD := true
+# USE_CLANG_PLATFORM_BUILD := true
 
 # Architecture
 TARGET_ARCH         := arm
@@ -141,10 +141,10 @@ TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
 # CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE = true
-BOARD_HARDWARE_CLASS += \
-    $(CANCRO_PATH)/cmhw \
-    hardware/cyanogen/cmhw
+# BOARD_USES_CYANOGEN_HARDWARE = true
+# BOARD_HARDWARE_CLASS += \
+#     $(CANCRO_PATH)/cmhw \
+#     hardware/cyanogen/cmhw
 
 # No old RPC for prop
 TARGET_NO_RPC := true
@@ -171,14 +171,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
 DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux policies
