@@ -95,10 +95,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/lowi.conf:system/etc/lowi.conf
 
 # NFC
-PRODUCT_PACKAGES += \
-    nfc_nci.bcm2079x.default \
-    NfcNci \
-    Tag
+# PRODUCT_PACKAGES += \
+#     nfc_nci.bcm2079x.default \
+#     NfcNci \
+#     Tag
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/device_check.sh:install/bin/device_check.sh
